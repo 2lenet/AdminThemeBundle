@@ -10,11 +10,10 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{% block title %}Avanzu Admin!{% endblock %}</title>
+    <title>{% block title %}Admin !{% endblock %}</title>
 
-    {# -------------------------------------------------------------------------------------------------- STYLESHEETS #}
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/avanzuadmintheme/static/'~ app.environment ~'/styles/admin-lte-all.css') }}" />
+        <link rel="stylesheet" href="/bundles/avanzuadmintheme/static/{{ app.environment}}/styles/admin-lte-all.css" />
     {% endblock %}
 
 
@@ -22,7 +21,7 @@
 
     {# --------------------------------------------------------------------------------------------- JAVASCRIPTS_HEAD #}
     {%  block javascripts_head %}
-        <script type="text/javascript" src="{{ asset('bundles/avanzuadmintheme/static/'~app.environment~'/scripts/modernizr.js') }}"></script>
+        <script type="text/javascript" src="/bundles/avanzuadmintheme/static/{{app.environment}}/scripts/modernizr.js"></script>
         <!--[if lt IE 9]>
 
         <![endif]-->
@@ -68,11 +67,7 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 {% block avanzu_sidebar %}
-                    {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
-                        {{ render(controller('AvanzuAdminThemeBundle:Sidebar:userPanel')) }}
-                        {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
-                    {% endif %}
-                    {{ render(controller('AvanzuAdminThemeBundle:Sidebar:menu', {'request':app.request})) }}
+                    {{ knp_menu_render('sidebar_menu',{'template': 'AvanzuAdminThemeBundle:Menu:knp_menu.html.twig', 'leaf_class':'', 'ancestror_class':'treeview-menu' ,'currentClass':'active'}) }}
                 {% endblock %}
             </section>
             <!-- /.sidebar -->
@@ -93,7 +88,7 @@
 
             <!-- Main content -->
             <section class="content">
-                {% block page_content %}{% endblock %}
+                {% block content %}{% endblock %}
             </section>
             <!-- /.content -->
         </div>

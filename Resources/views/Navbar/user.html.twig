@@ -10,11 +10,11 @@
         <li class="user-header">
             {{ macro.avatar(user.avatar, user.username) }}
             <p>
-                {{user.name}} - {{user.title}}
-                <small>{{ 'Member since %date%'|trans({'%date%': user.memberSince|date('m.Y') }, 'AvanzuAdminTheme') }}</small>
+                {{user.name}}
             </p>
         </li>
         <!-- Menu Body -->
+        <!--
         <li class="user-body">
             <div class="col-xs-4 text-center">
                 <a href="#">Followers</a>
@@ -26,13 +26,14 @@
                 <a href="#">Friends</a>
             </div>
         </li>
+        -->
         <!-- Menu Footer-->
         <li class="user-footer">
             <div class="pull-left">
-                <a href="{{ path('avanzu_admin_profile', {'userid' : user.identifier}) }}" class="btn btn-default btn-flat">{{'Profile'|trans({}, 'AvanzuAdminTheme')}}</a>
+                <a href="{{ path('avanzu_admin_profile', {'userid' : user.identifier}) }}" class="btn btn-default btn-flat">{{'Mon profil'|trans({}, 'AvanzuAdminTheme')}}</a>
             </div>
             <div class="pull-right">
-                <a href="{{ path('avanzu_admin_logout') }}" class="btn btn-default btn-flat">{{ 'Sign out'|trans({}, 'AvanzuAdminTheme') }}</a>
+                <a href="{{ path('avanzu_admin_logout') }}" class="btn btn-default btn-flat">{{ 'Se deconnecter'|trans({}, 'AvanzuAdminTheme') }}</a>
             </div>
         </li>
     </ul>
