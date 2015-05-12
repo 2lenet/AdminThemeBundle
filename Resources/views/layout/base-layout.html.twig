@@ -67,6 +67,8 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 {% block avanzu_sidebar %}
+
+                    {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
                     {{ knp_menu_render('sidebar_menu',{'template': 'AvanzuAdminThemeBundle:Menu:knp_menu.html.twig', 'leaf_class':'', 'ancestror_class':'treeview-menu' ,'currentClass':'active'}) }}
                 {% endblock %}
             </section>
