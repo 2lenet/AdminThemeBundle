@@ -20,7 +20,7 @@
         "jquery-ui"                 : "*",
         "momentjs"                  : "*",
         "backbone"                  : "*",
-        "underscore"                : "*",
+        "underscore"                : "1.8.3",
         "modernizr"                 : "*",
         "spinjs"                    : "*",
         "marionette"                : "*",
@@ -32,5 +32,8 @@
         "ionicons"                  : "*",
         "fullcalendar"              : "*",
         "adminlte"                  : ">=2.0.0 <3.0"
+    }, 
+    "resolutions": {
+        "underscore"                : "1.8.3"
     }
 }
