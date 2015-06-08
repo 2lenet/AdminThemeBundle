@@ -3,3 +3,111 @@ body {
   margin-top: 70px;
 
 }
+//Filter List
+
+.filter_lists{
+    min-height: 40px;
+    select{
+        height: auto;
+        width: 150px;
+        margin: 0;
+    }
+    label{
+        cursor: pointer;
+    }
+    .status{
+        float: left;
+        line-height: 24px;
+        @include single_transition(all, .1s, ease-in-out);
+        margin-top: 10px;
+        &.all{
+            opacity: .5;
+        }
+        &.active{
+            opacity: 1;
+            color: #3F8EDF;
+        }
+    }
+    .filters_wrp{
+        opacity: .5;
+        @include single_transition(opacity, .1s, ease-in-out);
+        .status{
+            margin-right: 25px;
+        }
+        &.active{
+            opacity: 1;
+            .status{
+                color: #3F8EDF;
+            }
+            .filters{
+                display: block;
+            }
+        }
+    }
+    .filters{
+        display: none;
+        list-style: none;
+        overflow: hidden;
+        vertical-align: middle;
+        @include grad-top-bottom(#FFF, #f5f5f5);
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 #ffffff;
+        padding: 10px;
+        li{
+            margin-bottom: 10px;
+            input, select{
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+    .filter_on_off:checked + .filters_wrp{
+        opacity: 1;
+        .status{
+            color: #3F8EDF;
+        }
+        .filters{
+            display: block;
+        }
+    }
+    .iPhoneCheckContainer{
+        float: left;
+        margin: 12px 10px 0;
+    }
+    .add_filter, .remove_filter{
+        background: none;
+        border: none;
+    }
+    .add_filter{
+        font-size: 11px;
+        padding: 5px 0;
+        margin-right: 20px;
+        background: #EEE;
+        color: #797E8C;
+        box-shadow: inset 0 0 2px rgba(0, 0, 0, .1), 0 0 1px 1px #FFF;
+        width: 537px;
+        @include single_transition(all, .1s, ease-in-out);
+        &:hover{
+            color: #333;
+        }
+        [class^="icon-"],
+        [class*=" icon-"] {
+            display: inline-block;
+            margin-right: .2em;
+        }
+    }
+    .apply_filter{
+        width: 100px;
+        margin-left: 438px;
+    }
+    .remove_filter{
+        font-size: 17px;
+        padding: 3px 0 0 0;
+        color: #797E8C;
+        opacity: .5;
+        @include single_transition(opacity, .1s, ease-in-out);
+        &:hover{
+            opacity: .9;
+        }
+    }
+}
