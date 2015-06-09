@@ -463,7 +463,7 @@ function initFilter() {
         $(".all").addClass("active");
     }
 
-    $("#filter_on_off").iphoneStyle({
+/*    $("#filter_on_off").iphoneStyle({
         checkedLabel: '',
         uncheckedLabel: '',
         resizeHandle: true,
@@ -483,7 +483,7 @@ function initFilter() {
             }
 
         }
-    });
+    });*/
 }
 
 function createFilter(el, hide, options){
