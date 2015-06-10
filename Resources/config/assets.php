@@ -52,7 +52,7 @@ return call_user_func(
                 'inputs' => array(
 
                     $lteCssBase.'bootstrap/css/bootstrap.min.css',
-                    $lteCssBase.'public/vendor/jquery-ui/themes/jquery-ui.css',
+                    $lteCssBase.'public/vendor/jquery-ui/themes/base/jquery-ui.css',
                     $lteCssBase.'plugins/bootstrap-slider/slider.css',
                     $lteCssBase.'plugins/datatables/dataTables.bootstrap.css',
                     $cssAssets.'vendor/fontawesome/css/font-awesome.min.css',
