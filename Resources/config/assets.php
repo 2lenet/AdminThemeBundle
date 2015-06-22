@@ -56,6 +56,7 @@ return call_user_func(
                     $lteCssBase.'plugins/datatables/dataTables.bootstrap.css',
                     $cssAssets.'vendor/fontawesome/css/font-awesome.min.css',
                     $cssAssets.'vendor/ionicons/css/ionicons.min.css',
+                    $cssAssets.'vendor/jquery-ui/themes/base/jquery-ui.css',
                     $lteCssBase.'dist/css/AdminLTE.css',
                     $lteCssBase.'dist/css/skins/_all-skins.css',
                 )
