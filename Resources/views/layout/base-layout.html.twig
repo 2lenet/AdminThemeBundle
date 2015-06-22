@@ -69,7 +69,7 @@
                 {% block avanzu_sidebar %}
 
                     {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
-                    {{ knp_menu_render('sidebar_menu',{'template': 'AvanzuAdminThemeBundle:Menu:knp_menu.html.twig', 'leaf_class':'', 'ancestror_class':'treeview-menu' ,'currentClass':'active'}) }}
+                    {{ knp_menu_render('sidebar_menu',{'template': 'AvanzuAdminThemeBundle:Menu:knp_menu.html.twig', 'leaf_class':'', 'ancestror_class':'treeview-menu' ,'currentClass':'active', 'ancestorClass':'active'}) }}
                 {% endblock %}
             </section>
             <!-- /.sidebar -->
