@@ -14,7 +14,7 @@
 
     {# -------------------------------------------------------------------------------------------------- STYLESHEETS #}
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/avanzuadmintheme/static/'~ app.environment ~'/styles/admin-lte-all.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/avanzuadmintheme/static/prod/styles/admin-lte-all.css') }}" />
     {% endblock %}
 
 
@@ -22,7 +22,7 @@
 
     {# --------------------------------------------------------------------------------------------- JAVASCRIPTS_HEAD #}
     {%  block javascripts_head %}
-        <script type="text/javascript" src="{{ asset('bundles/avanzuadmintheme/static/'~ app.environment ~'/scripts/modernizr.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/avanzuadmintheme/static/prod/scripts/modernizr.js') }}"></script>
         <!--[if lt IE 9]>
 
         <![endif]-->
