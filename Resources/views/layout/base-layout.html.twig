@@ -95,8 +95,13 @@
 
             <!-- Main content -->
             <section class="content">
+                {% if exception is defined %}
+                    {% include 'TwigBundle:Exception:exception.html.twig' %}
+                {% endif %}
                 {% block flash %}{% endblock %}
-                {% block content %}{% endblock %}
+                {% block body %}
+                    {% block content %}{% endblock %}
+                {% endblock %}
             </section>
             <!-- /.content -->
         </div>
