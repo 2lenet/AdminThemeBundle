@@ -14,24 +14,22 @@
     <title>{% block title %}Admin !{% endblock %}</title>
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="/bundles/avanzuadmintheme/static/prod/styles/admin-lte-all.css" />
+        <link rel="stylesheet" href="/dist/styles/admin.css">
     {% endblock %}
-
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    {% block javascripts %}
-        <script src="{{ asset('bundles/avanzuadmintheme/static/prod/scripts/admin-lte-all.js') }}"></script>
-        <script src="{{ asset('bundles/avanzuadmintheme/js/script.js') }}"></script>
-    {% endblock %}
-    {# --------------------------------------------------------------------------------------------- JAVASCRIPTS_HEAD #}
-    {%  block javascripts_head %}
-        <script type="text/javascript" src="/bundles/avanzuadmintheme/static/prod/scripts/modernizr.js"></script>
-        <!--[if lt IE 9]>
-
-        <![endif]-->
-
-    {% endblock %}
     
+
+    {%  block javascripts_head %}
+        <script src="/src/bower_components/modernizr/modernizr.js"></script>
+        <script src="/src/bower_components/jquery/dist/jquery.min.js"></script>
+        {% if  app.environment == 'dev' %}
+            {% include('::_js.html.twig') %}
+        {% else %}
+            {% include('::_js_combined.html.twig') %}
+        {% endif %}
+    {% endblock %}
+
 
 </head>
 <body class="{{ admin_skin|default('skin-blue')}}">

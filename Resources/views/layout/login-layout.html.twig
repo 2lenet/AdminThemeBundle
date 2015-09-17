@@ -11,33 +11,27 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{% block title %}Admin{% endblock %}</title>
-
-    {# -------------------------------------------------------------------------------------------------- STYLESHEETS #}
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/avanzuadmintheme/static/prod/styles/admin-lte-all.css') }}" />
+        <link rel="stylesheet" href="/dist/styles/admin.css">
     {% endblock %}
-
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    
 
-    {# --------------------------------------------------------------------------------------------- JAVASCRIPTS_HEAD #}
     {%  block javascripts_head %}
-        <script type="text/javascript" src="{{ asset('bundles/avanzuadmintheme/static/prod/scripts/modernizr.js') }}"></script>
-        <!--[if lt IE 9]>
-
-        <![endif]-->
-
+        <script src="/src/bower_components/modernizr/modernizr.js"></script>
+        <script src="/src/bower_components/jquery/dist/jquery.min.js"></script>
+        {% if  app.environment == 'dev' %}
+            {% include('::_js.html.twig') %}
+        {% else %}
+            {% include('::_js_combined.html.twig') %}
+        {% endif %}
     {% endblock %}
+
 
 </head>
 <body class="login-page">
 {% block content %}{% endblock %}
-
-{# ------------------------------------------------------------------------------------------------------ JAVASCRIPTS #}
-{% block javascripts %}
-    <script src="{{ asset('bundles/avanzuadmintheme/static/'~ app.environment ~'/scripts/admin-lte-all.js') }}"></script>
-{% endblock %}
-
 {# ----------------------------------------------------------------------------------------------- JAVASCRIPTS_INLINE #}
 {% block javascripts_inline %}
 {% endblock %}
