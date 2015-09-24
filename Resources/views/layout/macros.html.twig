@@ -29,7 +29,7 @@
 
 {% macro avatar(image, alt, class) %}
     {% if image %}
-        <img src="{{ asset(image) }}" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
+        <img src="/bundles/avanzuadmintheme/img/avatar.png" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
     {% else %}
         {% image '/bundles/avanzuadmintheme/img/avatar.png' %}
         <img src="{{ asset_url }}" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
