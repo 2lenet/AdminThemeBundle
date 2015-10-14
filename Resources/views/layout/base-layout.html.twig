@@ -96,7 +96,9 @@
                 {% if exception is defined %}
                     {% include 'TwigBundle:Exception:exception.html.twig' %}
                 {% endif %}
-                {% block flash %}{% endblock %}
+                {% block flash %}
+                    {% include 'AvanzuAdminThemeBundle:layout:_flash.html.twig' %}
+                {% endblock %}
                 {% block body %}
                     {% block content %}{% endblock %}
                 {% endblock %}
