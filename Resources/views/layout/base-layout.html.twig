@@ -32,7 +32,11 @@
 
 
 </head>
-<body class="{{ admin_skin|default('skin-blue')}}">
+{% block avanzu_admin_body_tag %}
+    <body class="{{ admin_skin|default('skin-blue')}}">
+{% endblock %}
+
+
     <div class="wrapper">
 
     {% block avanzu_admin_header %}
