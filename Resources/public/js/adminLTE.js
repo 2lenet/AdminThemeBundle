@@ -240,6 +240,11 @@ $.AdminLTE.pushMenu = function (toggleBtn) {
         //Enable sidebar push menu
         $("body").toggleClass('sidebar-collapse');
         $("body").toggleClass('sidebar-open');
+        if ($("body").hasClass('sidebar-collapse')) {
+            $.cookie('menu_hide',1,{ path: '/'});
+        } else {
+            $.removeCookie('menu_hide',{ path: '/'});
+        }
     });
     $(".content-wrapper").click(function () {
         //Enable hide menu when clicking on the content-wrapper on small screens
@@ -430,48 +435,3 @@ $.AdminLTE.boxWidget = {
 
 })(jQuery);
 
-/*
- * TODO LIST CUSTOM PLUGIN
- * -----------------------
- * This plugin depends on iCheck plugin for checkbox and radio inputs
- *
- * @type plugin
- * @usage $("#todo-widget").todolist( options );
- */
-(function ($) {
-
-    $.fn.todolist = function (options) {
-        // Render options
-        var settings = $.extend({
-            //When the user checks the input
-            onCheck: function (ele) {
-            },
-            //When the user unchecks the input
-            onUncheck: function (ele) {
-            }
-        }, options);
-
-        return this.each(function () {
-
-            if (typeof $.fn.iCheck != 'undefined') {
-                $('input', this).on('ifChecked', function (event) {
-                    var ele = $(this).parents("li").first();
-                    ele.toggleClass("done");
-                    settings.onCheck.call(ele);
-                });
-
-                $('input', this).on('ifUnchecked', function (event) {
-                    var ele = $(this).parents("li").first();
-                    ele.toggleClass("done");
-                    settings.onUncheck.call(ele);
-                });
-            } else {
-                $('input', this).on('change', function (event) {
-                    var ele = $(this).parents("li").first();
-                    ele.toggleClass("done");
-                    settings.onCheck.call(ele);
-                });
-            }
-        });
-    };
-}(jQuery));
