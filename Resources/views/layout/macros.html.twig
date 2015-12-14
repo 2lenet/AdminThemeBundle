@@ -28,13 +28,9 @@
 
 
 {% macro avatar(image, alt, class) %}
-    {% if image %}
-        <img src="/bundles/avanzuadmintheme/img/avatar.png" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
-    {% else %}
-        {% image '/bundles/avanzuadmintheme/img/avatar.png' %}
-        <img src="/bundles/avanzuadmintheme/img/avatar.png" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
-        {% endimage %}
-    {% endif %}
+
+    <img src="/bundles/avanzuadmintheme/img/avatar.png" class="{{ class|default('img-circle') }}" alt="{{ alt }}" />
+  
 {% endmacro %}
 
 {% macro menu_item(item) %}
