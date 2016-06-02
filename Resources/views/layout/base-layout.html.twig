@@ -16,8 +16,9 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="/dist/styles/admin.css">
     {% endblock %}
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block favicon %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% endblock %}
     
 
     {%  block javascripts_head %}
