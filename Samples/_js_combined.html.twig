@@ -1,0 +1,13 @@
+<!-- build:js /dist/main.js -->
+  <script src="/src/js/bower.js"></script>
+  <script src="/bundles/avanzuadmintheme/js/adminLTE.js"></script>
+  <script src="/bundles/lleadminlist/js/adminlist.js"></script>
+  <script src="/bundles/fosjsrouting/js/router.js"></script>
+<!-- endbuild -->
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+
+<script>
+    var right_edit = '{{ is_granted('ROLE_ADMIN_PLANNING_EDIT') }}' ;
+    var right_geree = '{{ is_granted('ROLE_ADMIN_PLANNING_GEREE') }}' ;
+</script>
+<script src="/src/js/planning.js"></script>

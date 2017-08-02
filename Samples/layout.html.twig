@@ -1,0 +1,35 @@
+{% extends 'AvanzuAdminThemeBundle:layout:base-layout.html.twig' %}
+{% block title %}Projet{% endblock %}
+
+{% block avanzu_admin_body_tag %}
+    <body class="skin-blue sidebar-mini {% if app.request.cookies.get('menu_hide',0) %}sidebar-collapse{% endif %}">
+{% endblock %}
+
+{% block avanzu_logo %}
+   <a href="/" class="logo">
+      <img style="vertical-align:top" src="/images/logo.png" />
+   </a>
+{% endblock %}
+
+{% block avanzu_admin_footer %}
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 0.1
+        </div>
+        <strong>Copyright &copy; 2017-2018 2le.</strong>
+    </footer>
+{% endblock %}
+
+
+{% block javascripts_inline %}
+    <script>
+
+      function endFlash(){
+        $('.lle-flash').hide(2000);
+      }
+      $(function(){
+        setTimeout(endFlash, 20000);
+      });
+      
+    </script>
+{% endblock %}

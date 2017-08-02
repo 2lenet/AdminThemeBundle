@@ -1,0 +1,192 @@
+sidebar_menu: 
+    childrenAttributes:  
+        class: sidebar-menu 
+    tree: 
+        accueil: 
+            label: Accueil 
+            route: lle_admin_homepage 
+            attributes: 
+                icon: home 
+        Individu:
+            label: Gestion du vivier
+            route: llealefbundle_admin_individu
+            roles: [ROLE_ADMIN_INDIVIDU_LIST]
+            attributes:
+                icon: users
+            children:
+                Vivier:
+                    label: Vivier
+                    roles: [ROLE_ADMIN_INDIVIDU_LIST]
+                    route: llealefbundle_admin_individu
+                    attributes:
+                        icon: users
+                Groupe:
+                    label: Groupes
+                    route: llealefbundle_admin_groupe
+                    roles: [ROLE_ADMIN_GROUPE_LIST]
+                    attributes:
+                        icon: cogs
+        Contrat:
+            label: Contrats
+            route: llealefbundle_admin_contrat
+            roles: [ROLE_ADMIN_CONTRAT_LIST]
+            attributes:
+                icon: file-text-o
+        Planning:
+            label: Planning
+            route: planning
+            roles: [ROLE_ADMIN_PLANNING_LIST]
+            attributes:
+                icon: calendar
+        Heures:
+            label: Gestion des fiches horaires
+            route: llealefbundle_admin_plage
+            roles: [ROLE_ADMIN_GESTION_FICHE_HORAIRE]
+            attributes:
+                icon: clock-o
+        DemandeAbsence:
+            label: Absences
+            route: llealefbundle_admin_demandeabsence
+            roles: [ROLE_ADMIN_DEMANDEABSENCE_LIST]
+            attributes:
+                icon: ban
+        Organigramme:
+            label: Organigramme
+            route: llealefbundle_admin_fonction
+            roles: [ROLE_ADMIN_FONCTION_LIST]
+
+            attributes:
+                icon: sitemap
+            children:
+                Site:
+                    label: Sites
+                    roles: [ROLE_ADMIN_SITE_LIST]
+                    route: llealefbundle_admin_site
+                    attributes:
+                        icon: university
+                Lieu:
+                    label: Lieux
+                    roles: [ROLE_ADMIN_LIEU_LIST]
+                    route: llealefbundle_admin_lieu
+                    attributes:
+                        icon: map-marker
+                Fonction:
+                    label: Fonctions
+                    route: llealefbundle_admin_fonction
+                    roles: [ROLE_ADMIN_FONCTION_LIST]
+                    attributes:
+                        icon: tags
+                Affectation:
+                    label: Affectations
+                    route: llealefbundle_admin_affectation
+                    roles: [ROLE_ADMIN_AFFECTATION_LIST]
+                    attributes:
+                        icon: map-signs
+                User:
+                    label: Utilisateurs
+                    route: llealefbundle_admin_user
+                    roles: [ROLE_ADMIN_USER_LIST]
+                    attributes:
+                        icon: user
+                Group:
+                    label: Rôles
+                    route: userbundle_admin_group
+                    roles: [ROLE_ADMIN_GROUP_LIST]
+                    attributes:
+                        icon: users
+        calendrier: 
+            label: Calendrier 
+            route: llealefbundle_admin_periode 
+            roles: [ROLE_ADMIN_PERIODE_LIST]
+            attributes: 
+                icon: calendar-times-o
+            children: 
+                Periode:
+                    label: Périodes
+                    route: llealefbundle_admin_periode
+                    roles: [ROLE_ADMIN_PERIODE_LIST]
+                    attributes:
+                        icon: calendar-times-o
+                Semaine:
+                    label: Semaines
+                    route: llealefbundle_admin_semaine
+                    roles: [ROLE_ADMIN_SEMAINE_LIST]
+                    attributes:
+                        icon: sliders
+                Jour:
+                    label: Jours
+                    route: llealefbundle_admin_jour
+                    roles: [ROLE_ADMIN_JOUR_LIST]
+                    attributes:
+                        icon: calendar-o
+
+        messages: 
+            label: Messages 
+            route: llealefbundle_admin_message 
+            roles: [ROLE_ADMIN_MESSAGE_LIST]
+            attributes: 
+                icon: info
+            children: 
+
+                Message:
+                    label: Messages
+                    route: llealefbundle_admin_message
+                    roles: [ROLE_ADMIN_MESSAGE_LIST]
+                    attributes:
+                        icon: info
+                MessageCategory:
+                    label: Categorie
+                    route: llealefbundle_admin_messagecategory
+                    roles: [ROLE_ADMIN_MESSAGECATEGORY_LIST]
+                    attributes:
+                        icon: folder-o
+
+        parametrage: 
+            label: Paramétrages 
+            route: lle_admin_homepage 
+            roles: [ROLE_ADMIN]
+            attributes: 
+                icon: cogs 
+            children: 
+                Civilite:
+                    label: Civilités
+                    route: llealefbundle_admin_civilite
+                    roles: [ROLE_ADMIN_CIVILITE_LIST]
+                    attributes:
+                        icon: cogs
+                Pays:
+                    label: Pays
+                    route: llealefbundle_admin_pays
+                    roles: [ROLE_ADMIN_PAYS_LIST]
+                    attributes:
+                        icon: cogs
+                SituationFamiliale:
+                    label: Situations familiales
+                    route: llealefbundle_admin_situationfamiliale
+                    roles: [ROLE_ADMIN_SITUATIONFAMILIALE_LIST]
+                    attributes:
+                        icon: cogs
+                Rubrique:
+                    label: Rubriques
+                    route: llealefbundle_admin_rubrique
+                    roles: [ROLE_ADMIN_RUBRIQUE_LIST]
+                    attributes:
+                        icon: cogs
+                TypeContrat:
+                    label: Type de contrats
+                    route: llealefbundle_admin_typecontrat
+                    roles: [ROLE_ADMIN_TYPECONTRAT_LIST]
+                    attributes:
+                        icon: cogs
+                Emploi:
+                    label: Emplois
+                    route: llealefbundle_admin_emploi
+                    roles: [ROLE_ADMIN_EMPLOI_LIST]
+                    attributes:
+                        icon: cogs
+                Secteur:
+                    label: Secteurs
+                    route: llealefbundle_admin_secteur
+                    roles: [ROLE_ADMIN_SECTEUR_LIST]
+                    attributes:
+                        icon: cogs
